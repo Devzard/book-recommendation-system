@@ -5,6 +5,11 @@ MAX_RECOMMENDATIONS = popularity_df.shape[0]
 
 
 def popular_books_top(top: int):
+    """
+    Return the top popular books.
+    param
+        - top: number of books to return
+    """
     if top > MAX_RECOMMENDATIONS:
         top = MAX_RECOMMENDATIONS
     elif top < 0:

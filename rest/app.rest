@@ -3,3 +3,14 @@ GET http://localhost:8000/info
 
 ###
 GET http://localhost:8000/popular/50
+
+###
+GET http://localhost:8000/search/Harry potter
+
+###
+POST http://localhost:8000/recommend
+Content-Type: application/json
+
+{
+    "name": "1984"
+}
