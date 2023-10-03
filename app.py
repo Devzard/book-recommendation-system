@@ -1,5 +1,6 @@
 from typing import Union
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import argparse
 from functools import lru_cache
@@ -13,6 +14,18 @@ import config
 
 app = FastAPI()
 
+origins = [
+    "http://localhost:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 class Book(BaseModel):
     name: str
 
@@ -22,13 +35,13 @@ def get_settings():
     return config.Settings()
 
 
-@app.get("/info")
+@app.get("/hello")
 def read_root():
     return {"message": f"Hello from {get_settings().backend_name}"}
 
 
 @app.get("/search/{book_name}")
-async def search_book_name(book_name: str):
+async def search_book_name(book_name: str = ""):
     return search_book(book_name)
 
 

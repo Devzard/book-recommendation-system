@@ -14,9 +14,9 @@ import Book from "./routes/book";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
+    element: <Root />,
     errorElement: <ErrorPage />,
-    children:[
+    children: [
       {
         path: "/book/:book_name",
         element: <Book />,
