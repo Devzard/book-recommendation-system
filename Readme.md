@@ -1,11 +1,11 @@
 # Book Recommendation System with React UI
 This is a simple recommendation system project that implements **popularity based** recommendation system and **collborative filtering system** to recommend books.
 
-<img title="home page" alt="demo image 1" src="demo/Screenshot 2023-10-05 at 12.09.47 AM.png">
+![demo_image_-1](https://github.com/Devzard/book-recommendation-system/assets/52529195/f16a5979-d288-4223-a8ca-79328e4510fd)
 
-<img title="search results" alt="demo image 2" src="demo/Screenshot 2023-10-05 at 12.16.25 AM.png">
+![demo image -2](https://github.com/Devzard/book-recommendation-system/assets/52529195/e9225345-d569-4e1f-9279-4df512e03a02)
 
-<img title="search results" alt="demo image 3" src="demo/Screenshot 2023-10-05 at 12.16.47 AM.png">
+![demo image -3](https://github.com/Devzard/book-recommendation-system/assets/52529195/d55248c0-c630-4420-881c-d03ac582d876)
 
 ## Steps to setup the project
 
