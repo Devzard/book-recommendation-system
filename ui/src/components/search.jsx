@@ -32,6 +32,7 @@ export default function Search(props) {
             <button className='w-full p-2 mt-2 bg-blue-500 text-white rounded hover:bg-blue-600' onClick={searchHandler}>
                 {isLoading ? <Loader/> : 'Search'}
             </button>
+            {bookData && bookData.length !== 0 && <p className='text-center p-2 text-gray-500'>Search Results</p>}
         </div>
     )
 }

@@ -1,4 +1,3 @@
-from typing import Union
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
@@ -36,7 +35,7 @@ def get_settings():
 
 
 @app.get("/hello")
-def read_root():
+def read_hello():
     return {"message": f"Hello from {get_settings().backend_name}"}
 
 
@@ -52,7 +51,9 @@ async def get_popular(limit: int):
 
 @app.post("/recommend")
 async def get_recommended(book: Book):
-    return recommendFor(book.name)
+    print(book.name)
+    recommendation_on = search_book(book.name, 1)[0]
+    return {'book': recommendation_on, 'recommendation': recommendFor(book.name)}
 
 
 
